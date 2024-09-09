@@ -3,13 +3,11 @@
 
 /* Estiliza o corpo da página */
 body {
-    background-image: url('./img/valorant-305kescxw5dpup7y.jpg');
-    background-size: cover;
-    background-position: center; /* Centraliza a imagem */
-    background-size: 80% 100%;
-    background-repeat: no-repeat;
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: #DDDDDD; /* Cor de fundo da página */
+    background-image: url('./img/valorant-305kescxw5dpup7y.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;/* Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -17,29 +15,33 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0; /* Remove a margem padrão */
     padding: 0; /* Remove o padding padrão */
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #000000;
 }
 
 /* Estiliza os títulos h1 */
 .logo-valorant {
-    width: 20rem;
-    margin-top: 15rem;
+    width: 15rem;
+    max-width: 100%;
     margin-bottom: 1rem;
+    margin-top: 20rem;
 }
 
 /* Estiliza as seções da página */
 section {
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
+    justify-content: center;
     align-items: center; /* Centraliza os itens horizontalmente */
-    margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
+    margin-bottom: 1rem;
 }
 
 /* Estiliza os inputs dentro das seções */
 section input {
-    width: 30rem; /* Largura dos inputs */
+    width: 25rem; /* Largura dos inputs */
     border: none; /* Remove a borda padrão */
     padding: 1rem; /* Espaçamento interno */
-    border-radius: .1rem; /* Borda arredondada */
     margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
     color: #45474B; /* Cor do texto */
     font-size: 1rem; /* Tamanho da fonte */
@@ -49,19 +51,20 @@ section input {
 
 /* Estiliza os botões dentro das seções */
 section button {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    padding: 1rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
-    border-radius: .5rem; /* Borda arredondada */
-    background: linear-gradient(to right, #8d0101, #ab0101); /* Cor de fundo do botão */
+    background-color: #ba1414; /* Cor de fundo do botão */
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    width: 15rem;
 }
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
-    background: linear-gradient(to right, #870101, #c70101); /* Cor de fundo do botão */
+    background-color: #e80c0c; /* Muda a cor de fundo ao passar o mouse */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+    color: #ffffff;
 }
 
 /* Estiliza a caixa de resultados da pesquisa */
@@ -92,7 +95,7 @@ section button:hover {
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor do texto dos links */
+    color: #dd0a0a; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -106,18 +109,28 @@ section button:hover {
     margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
+.funcao-agente{
+    color: #dd0a0a;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #0f0f0f7c; /* Cor de fundo do rodapé */
+    background-color: #000000; /* Cor de fundo do rodapé */
     color: #ffffff; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
-    padding: 0; /* Espaçamento interno */
+    padding: 45px; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
-    position: static; /* Posiciona o rodapé */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 0; /* Alinha ao fundo da página */
     font-size: 1rem; /* Tamanho da fonte */
-    margin-top: auto;
-}
+    position: static;
+    }
 
 @media (max-width: 768px) {
     h1 {
@@ -129,6 +142,7 @@ footer {
         width: 25rem; /* Largura dos inputs em telas menores */
         padding: 0.8rem; /* Espaçamento interno em telas menores */
     }
+    
 
     .resultados-pesquisa {
         width: 40rem; /* Largura da caixa de resultados em telas menores */
