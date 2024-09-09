@@ -1,6 +1,4 @@
-## **README.md**
-
-### **Valorant Agent Finder**
+## **Valorant Agent Finder**
 
 **O que é?**
 
